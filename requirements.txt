@@ -22,3 +22,4 @@ torchvision
 
 # Ultralytics (YOLO - uses torch)
 ultralytics
+pillow==10.3.0
