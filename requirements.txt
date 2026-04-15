@@ -1,0 +1,18 @@
+streamlit-webrtc>=0.47.0
+scikit-learn
+matplotlib
+scipy
+google-generativeai
+openai
+python-dotenv
+streamlit-drawable-canvas
+av
+streamlit==1.30.0
+numpy==1.26.4
+pandas==2.2.2
+plotly==5.20.0
+opencv-python-headless==4.9.0.80
+tensorflow==2.15.0
+ultralytics==8.2.0
+torch==2.2.2 --extra-index-url https://download.pytorch.org/whl/cpu
+torchvision==0.17.2 --extra-index-url https://download.pytorch.org/whl/cpu
