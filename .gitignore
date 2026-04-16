@@ -1,7 +1,8 @@
 __pycache__/
 *.pyc
 .gemini/
-.streamlit/
+# .streamlit/ (removed to allow config.toml tracking)
+
 NeuralNetworkLab/
 tmp_mp_test.py
 NeuralNetworkLab_exclude.txt
