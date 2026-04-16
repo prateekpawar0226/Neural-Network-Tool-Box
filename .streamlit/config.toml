@@ -1,2 +1,20 @@
-[runner]
-python_version = "3.10"
+[theme]
+primaryColor = "#818CF8"
+backgroundColor = "#0A0E1A"
+secondaryBackgroundColor = "#1E293B"
+textColor = "#E2E8F0"
+font = "sans serif"
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 200
+
+[browser]
+gatherUsageStats = false
+toolbarMode = "minimal"
+
+[client]
+showErrorDetails = false
