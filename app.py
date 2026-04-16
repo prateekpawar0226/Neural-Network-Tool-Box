@@ -16,14 +16,19 @@ from Deep_Belief_Network.dbn_ui import dbn_page
 from Forward_Propagation.forward_propagation import forward_propagation_page
 from Gradient_Descent.gradient_descent_ui import gradient_descent_page
 from Hopfield.hopfield_ui import hopfield_page
-from OpenCV_Detection.opencv_hub import (
-    opencv_attendance_page,
-    opencv_detection_page,
-    opencv_face_scan_page,
-    opencv_palm_page,
-    opencv_sign_page,
-    opencv_vehicle_page,
-)
+try:
+    from OpenCV_Detection.opencv_hub import (
+        opencv_attendance_page,
+        opencv_detection_page,
+        opencv_face_scan_page,
+        opencv_palm_page,
+        opencv_sign_page,
+        opencv_vehicle_page,
+    )
+    OPENCV_AVAILABLE = True
+except ImportError as e:
+    OPENCV_AVAILABLE = False
+    OPENCV_ERROR = str(e)
 from Perceptron.perceptron_ui import perceptron_page
 from Sentiment_Analysis.sentiment_analysis import sentiment_analysis_page
 from utils.ai_sidebar import render_global_ai_hub, render_global_robot
@@ -214,6 +219,22 @@ def main():
     if selection == "home":
         app_home()
         return
+
+    if selection in ["m6", "cv_gallery", "cv_attendance", "cv_face_scan", "cv_vehicle", "cv_sign", "cv_palm"]:
+        if not OPENCV_AVAILABLE:
+            st.error("### 🛑 Computer Vision Module Unavailable")
+            st.warning(f"Error: `{OPENCV_ERROR}`")
+            st.info("""
+                This is usually due to missing system libraries on Streamlit Cloud. 
+                
+                **To resolve this:**
+                1. Ensure `packages.txt` exists in your root directory.
+                2. Add `libgl1` to it.
+                3. If the error persists, try adding `ffmpeg` or `libglib2.0-dev` (checking for conflicts).
+                
+                The app is currently rebuilding to try and resolve this automatically.
+            """)
+            return
 
     renderer = module["render"]
     if renderer:

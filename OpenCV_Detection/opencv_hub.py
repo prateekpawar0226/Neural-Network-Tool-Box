@@ -5,7 +5,11 @@ import os
 import tempfile
 import time
 
-import cv2
+try:
+    import cv2
+    OPENCV_READY = True
+except ImportError:
+    OPENCV_READY = False
 import numpy as np
 import pandas as pd
 import streamlit as st
