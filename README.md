@@ -51,8 +51,8 @@ Implemented with a bespoke CSS design system, Aura AI Studio offers:
 
 ### 1. Initialize Workspace
 ```bash
-git clone https://github.com/Anant-Goel2006/Neural-Network-Lab-Tool-Box.git
-cd Neural-Network-Lab-Tool-Box
+git clone https://github.com/prateekpawar0226/Neural-Network-Tool-Box.git
+cd Neural-Network-Tool-Box
 ```
 
 ### 2. Configure Environment
