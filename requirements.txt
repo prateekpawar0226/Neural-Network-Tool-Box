@@ -14,12 +14,12 @@ opencv-python-headless
 google-generativeai
 openai
 python-dotenv
+
 av
 
-# PyTorch (CPU version - no extra index needed)
 torch
 torchvision
 
-# Ultralytics (YOLO - uses torch)
 ultralytics
-pillow==10.3.0
+
+pillow>=10.4.0,<11
